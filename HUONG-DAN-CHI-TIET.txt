@@ -1,0 +1,108 @@
+============================================================
+ HUONG DAN PROFILE CHO NGUOI KHONG BIET GI VE CODE
+ Source: O:\profiledt-source
+============================================================
+
+1. THU MUC NAY CO GI?
+--------------------
+- index.html      : trang web chinh (nhay dup de xem thu)
+- config.js       : FILE DUY NHAT BAN CAN SUA - moi thong tin nam o day
+- script.js       : code chay (DUNG DUNG VAO)
+- style.css       : mau sac (DUNG DUNG VAO)
+- *.jpg, *.png, *.mp3 : anh + nhac mau
+- File nay        : huong dan
+
+2. CACH XEM THU NGAY (chua can mang)
+-------------------------------------
+B1: Mo thu muc O:\profiledt-source
+B2: Nhay dup chuot vao file index.html
+B3: Web tu mo len bang Chrome/Coc Coc. Bam vao giua man hinh de vao.
+
+3. CACH THAY THONG TIN CUA BAN (chi sua file config.js)
+-------------------------------------------------------
+B1: Chuot phai vao file config.js > Open with > Notepad (hoac VS Code)
+B2: Tim cac dong co chu "THAY O DAY" roi sua:
+
+  a) Discord ID (de hien dang online / dang choi gi):
+     - Mo Discord tren dien thoai/may tinh
+     - Vao Cai dat > Nang cao > Bat "Che do nha phat trien"
+     - Quay ra, chuot phai vao ten ban > Sao chep ID
+     - Dan vao dong: discordId: "DAN_ID_VAO_DAY",
+       Vi du: discordId: "123456789012345678",
+
+     - BAT BUOC de hien online (chi lam 1 lan):
+       Vao link https://discord.gg/lanyard
+       Bam "Chap nhan loi moi" > vao kenh bat ky > go lenh /setup > Enter
+       Cho bot bao thanh cong. Xong!
+       Neu bo qua buoc nay, web van chay nhung bao STANDBY.
+
+  b) Ten, link mang xa hoi, tieu su:
+     - name: "Ten Cua Ban",
+     - username, title, bio, location: sua chu trong ngoac kep la xong
+     - socials: thay 4 link facebook/instagram/tiktok/spotify thanh link cua ban
+       Muon xoa bot 1 nut: xoa ca dong { name... } do di
+       Muon them: copy 1 dong roi doi ten + link
+
+  c) Anh dai dien + banner:
+     - Cach de nhat: chep file anh cua ban vao chung thu muc nay
+       Vi du: avatar-cua-toi.jpg
+     - Roi trong config.js sua dong:
+       avatar: "avatar-cua-toi.jpg",
+     - banner: co san 3 file de chon:
+       "banner_executive.jpg" , "profile_banner.jpg" , "profile_banner_cyber.jpg"
+       Chi can doi ten file la banner doi theo.
+
+  d) Server Discord:
+     - Mo server Discord cua ban > nut Moi (Invite) > Sao chep lien ket
+     - Dan vao dong: inviteUrl: "https://discord.gg/MA_MOI_CUA_BAN",
+     - name, role, description: sua thanh ten server cua ban
+     - icon/banner web se TU DONG lay tu Discord, khong can up anh.
+
+  e) Nhac:
+     - Chep file .mp3 cua ban vao thu muc nay, vi du: nhac-moi.mp3
+     - Sua dong url: "nhac-moi.mp3" va doi title/artist.
+
+B3: Bam Ctrl + S de LUU. Mo lai index.html de xem doi chua.
+     Neu khong thay doi: bam Ctrl + F5 de tai lai trang.
+
+4. CACH DUA WEB LEN MANG (de nguoi khac xem duoc)
+-------------------------------------------------
+CACH 1: DON GIAN NHAT - Netlify Drop (khong can tai khoan, 30 giay):
+  B1: Vao https://app.netlify.com/drop bang Chrome
+  B2: Keo tha CA THU MUC profiledt-source vao trang do
+  B3: Cho 10 giay, web tra cho ban 1 link https://...netlify.app
+  B4: Gui link do cho ban be. Xong!
+  Muon doi ten link dep: Dang nhap > Site settings > Change site name.
+
+CACH 2: Vercel (link dep hon):
+  B1: Vao https://vercel.com > Dang nhap bang Github/Google
+  B2: Bam Add New > Project > Upload (keo thu muc profiledt-source vao)
+  B3: Bam Deploy. Lay link https://...vercel.app
+
+CACH 3: Hosting Viet Nam / cPanel (neu ban da mua hosting):
+  B1: Vao cPanel > File Manager > public_html
+  B2: Bam Upload > chon TAT CA file trong O:\profiledt-source (khong up ca thu muc, chi up file ben trong)
+  B3: Mo ten-mien-cua-ban.com la thay web.
+
+5. VE CAI "API DISCORD" - DA AN XONG
+-------------------------------------
+- Trong ban goc co ID Discord ca nhan: 114xxx... + link avatar + link server.
+- Trong source o O:\profiledt-source nay TOI DA XOA HET:
+  + config.js: discordId de trong "" de nguoi khac tu dien
+  + index.html: xoa 2 link avatar Discord, thay bang favicon.png
+  + server: xoa ma moi nk6U9fNVc2, thay bang PASTE_MA_MOI_CUA_BAN
+- Ban check lai: mo config.js tim so 114172... se khong thay nua.
+- Nguoi nhan source chi can dan ID cua ho vao nhu muc 3a la chay.
+- Luu y: Discord ID la ID CONG KHAI (ai cung thay duoc), khong phai token mat.
+  Web dung API cong khai Lanyard (api.lanyard.rest) nen khong lo mat nick.
+  Khong bao gio dan Discord Token / mat khau vao source nay.
+
+6. LOI HAY GAP
+--------------
+- Web trang tinh / khong hien avatar: ban chua sua config.js hoac dat sai ten file anh (viet hoa/thuong phai khop 100%).
+- Khong hien Online Discord: chua vao server Lanyard go /setup. Lam lai muc 3a.
+- Nhac khong keu: trinh duyet chan tu chay. Bam vao man hinh 1 cai (nut open sanctuary) la co nhac.
+- Sua xong khong thay doi: bam Ctrl + F5, hoac thu trinh duyet an danh.
+- Gui cho ban be xem thu tren may minh: gui file zip O:\profiledt-source.zip, ban kia giai nen > mo index.html.
+
+Chuc ban trien khai thanh cong!

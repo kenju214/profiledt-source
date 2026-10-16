@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hướng dẫn Profile</title><style>body{font-family:Arial,sans-serif;max-width:800px;margin:20px auto;padding:0 16px;line-height:1.7;background:#0a0a0a;color:#eee}h1{color:#fff}h2{color:#7dd3fc;margin-top:28px;border-bottom:1px solid #333;padding-bottom:6px}code{background:#1e293b;padding:2px 6px;border-radius:4px;color:#fde68a}.box{background:#111827;border:1px solid #334155;border-radius:10px;padding:14px;margin:12px 0}a{color:#7dd3fc}ol li,ul li{margin:6px 0}.note{background:#1e3a2b;border:1px solid #22c55e;border-radius:8px;padding:10px}</style></head><body>
+<h1>Hướng dẫn Profile cho người mới (chỉ 5 phút)</h1>
+<p><b>1. Xem thử:</b> Nháy đúp file <code>index.html</code> trong thư mục này.</p>
+<p><b>2. Sửa thông tin:</b> Chỉ sửa duy nhất file <code>config.js</code> bằng Notepad. Tìm các dòng có chữ <code>THAY Ở ĐÂY</code>.</p>
+<h2>Bước 1 — Điền Discord ID</h2>
+<ol><li>Mở Discord → Cài đặt → Nâng cao → bật <b>Chế độ nhà phát triển</b>.</li><li>Chuột phải vào tên bạn → <b>Sao chép ID</b>.</li><li>Trong <code>config.js</code> sửa: <code>discordId: "DÁN_ID_VÀO_ĐÂY"</code></li><li>Bắt buộc để hiện online: vào <a href="https://discord.gg/lanyard">discord.gg/lanyard</a> → gõ <code>/setup</code> → Enter.</li></ol>
+<h2>Bước 2 — Tên, ảnh, link</h2>
+<ul><li><code>name, bio, location</code>: sửa chữ trong ngoặc kép.</li><li>Ảnh: chép file <code>avatar.jpg</code> vào chung thư mục, sửa <code>avatar: "avatar.jpg"</code>.</li><li>Banner có sẵn: <code>banner_executive.jpg</code>, <code>profile_banner.jpg</code>, <code>profile_banner_cyber.jpg</code>.</li><li><code>socials</code>: thay link Facebook/Instagram/TikTok của bạn. Xóa dòng là mất nút, copy dòng là thêm nút.</li><li>Server Discord: lấy link Mời trong server → dán vào <code>inviteUrl</code>.</li><li>Nhạc: chép file <code>.mp3</code> vào thư mục → sửa <code>url: "ten-file.mp3"</code>.</li></ul>
+<p>Lưu file (Ctrl+S) → mở lại <code>index.html</code> → bấm Ctrl+F5 nếu chưa thấy đổi.</p>
+<h2>Bước 3 — Đưa lên mạng</h2>
+<ol><li><b>Dễ nhất (30 giây):</b> vào <a href="https://app.netlify.com/drop">app.netlify.com/drop</a> → kéo thả cả thư mục này vào → lấy link.</li><li><b>Vercel:</b> vào vercel.com → Add New → Upload thư mục → Deploy.</li><li><b>Hosting cPanel:</b> vào File Manager → public_html → Upload toàn bộ file bên trong thư mục này.</li></ol>
+<div class="note"><b>Về Discord:</b> source này đã xóa sạch ID cá nhân của chủ cũ. Ô Discord để trống để bạn tự điền. ID Discord là công khai, không phải mật khẩu/token nên an toàn. Không bao giờ dán token Discord vào đây.</div>
+<p><i>Lỗi hay gặp: không hiện online = chưa gõ /setup. Nhạc không kêu = bấm vào màn hình 1 cái. Sửa không thấy đổi = Ctrl+F5.</i></p>
+</body></html>
